@@ -79,7 +79,7 @@ uvicorn main:app --reload
 
 </details>
 
-3. 使用浏览器访问 http://127.0.0.1:8000/items/5?q=somequery。你将会看到如下 JSON 响应：
+3. 使用浏览器访问 http://127.0.0.1:8000/items/5?q=somequery 。你将会看到如下 JSON 响应：
 
 ```json
 {"item_id": 5, "q": "somequery"}
@@ -92,11 +92,11 @@ uvicorn main:app --reload
 >- `/items/{item_id}` 路径 有一个 路径参数 `item_id` 并且应该为 `int` 类型。
 >- `/items/{item_id}` 路径 有一个可选的 `str` 类型的 查询参数 `q`。
 
-4. 现在访问 http://127.0.0.1:8000/docs。你会看到自动生成的交互式 API 文档（由 Swagger UI生成）：
+4. 现在访问 http://127.0.0.1:8000/docs 。你会看到自动生成的交互式 API 文档（由 Swagger UI生成）：
 
-![](./assets/docs.png)
+![](./assets/docs-01.png)
 
-5. 访问 http://127.0.0.1:8000/redoc。你会看到另一个自动生成的文档（由 ReDoc 生成）：
+5. 访问 http://127.0.0.1:8000/redoc 。你会看到另一个自动生成的文档（由 ReDoc 生成）：
 
 ![](assets/docs-02.png)
 
@@ -136,7 +136,7 @@ def update_item(item_id: int, item: Item):
 
 服务器将会自动重载（因为在上面的步骤中你向 uvicorn 命令添加了 --reload 选项）。
 
-2. 访问 http://127.0.0.1:8000/docs。交互式 API 文档将会自动更新，并加入新的请求体：
+2. 访问 http://127.0.0.1:8000/docs 。交互式 API 文档将会自动更新，并加入新的请求体：
 
 ![](assets/docs-03.png)
 
@@ -148,7 +148,7 @@ def update_item(item_id: int, item: Item):
 
 ![](assets/docs-05.png)
 
-5. 访问 http://127.0.0.1:8000/redoc。可选文档同样会体现新加入的请求参数和请求体：
+5. 访问 http://127.0.0.1:8000/redoc 。可选文档同样会体现新加入的请求参数和请求体：
 
 ![](assets/docs-06.png)
 
